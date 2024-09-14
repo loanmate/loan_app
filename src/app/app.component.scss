@@ -1,0 +1,164 @@
+.main-toolbar {
+  display: flex;
+  align-items: center;
+  background-color: white; // Adjust if needed for theme
+  color: #1d2731;
+
+  .company-name {
+    font-weight: bold;
+    display: block;
+    font-size: 1.6rem;
+    flex-grow: 1;
+    cursor: pointer;
+    .slogan {
+      font-size: 0.875rem; // Adjust font size for the slogan
+      font-weight: normal;
+      color: #1d2731; // Adjust color to be less prominent than the company name
+    }
+  }
+
+  .logo-image {
+    max-width: 200px; // Adjust the max-width as needed
+    height: auto; // Maintain aspect ratio
+    display: block;
+    cursor: pointer;
+    padding: 1.5rem; // Adjust padding as per design
+    margin-right: 1rem; // Adjust space between logo and the menu
+    padding-left: 0px;
+  }
+
+  .contact-button {
+    background-color: #1d2731;
+    color: white;
+    &:hover {
+      background-color: #083c5d;
+      color: white;
+    }
+  }
+
+  .nav-button {
+    color: #1d2731;
+    &:hover {
+      background-color: #1d2731;
+      color: white;
+    }
+  }
+
+  // .nav-loan-items {
+  //   color: #1d2731 !important;
+  //   &:hover {
+  //     background-color: #1d2731 !important;
+  //     color: white !important;
+  //   }
+  // }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+
+    button {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.desktop-nav button,
+.mobile-nav .nav-links button {
+  color: #1d2731; // Default text color
+  transition: background-color 0.3s ease; // Smooth transition for background color
+
+  &:hover {
+    background-color: #1d2731; // Slightly darker grey
+    color: white; // Optional: Change text color on hover
+  }
+}
+
+.get-loan {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-nav {
+  width: 250px;
+  max-width: 100%; // Ensure it does not exceed viewport width
+
+  .mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .company-name-mobile {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.footer-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 0.875rem;
+  height: auto;
+  min-height: 56px;
+  align-items: center;
+  width: 100%; // Ensure full width
+  background-color: #1d2731;
+  color: white;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .spacer {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .menu-button {
+    display: inline-flex !important;
+  }
+
+  .slogan {
+    display: none;
+  }
+
+  .logo-image {
+    // max-width: 140px !important; // Smaller size for mobile view
+    // padding: 0.3rem !important;
+    // margin-left: 5.3rem !important;
+    position: absolute;
+    right: 0.5rem; // Adjust the right positioning as needed
+    top: 0.5rem; // Align with the top for mobile
+    max-width: 110px !important; // Adjust logo size for mobile view
+    padding: 0 !important; // Remove padding for mobile
+    margin-right: 0 !important; // Remove margin-right for mobile
+  }
+}

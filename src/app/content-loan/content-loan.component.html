@@ -1,0 +1,24 @@
+<div class="content-container">
+  <mat-card class="definition-container">
+    <mat-card-header style="padding-top: 0; padding-bottom: 8px;">
+      <div class="heading">{{ heading }}</div>
+    </mat-card-header>
+    <mat-card-content class="content">
+      <div class="left-section">
+        <p>{{ content }}</p>
+        <div class="eligibility">
+          <strong>Eligibility:</strong>
+          <ul>
+            <li *ngFor="let point of eligibility">{{ point }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-section">
+        <img [src]="imageLoc" alt="Loan Options" class="business-image">
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="button-container">
+      <button mat-raised-button color="primary" class="apply-button" (click)="routePage()">Apply Now</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

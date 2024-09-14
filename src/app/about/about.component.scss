@@ -1,0 +1,50 @@
+.about-container {
+    line-height: 2.5rem;
+    padding: 20px;
+    color: #1d2731;
+  }
+  
+  .about-heading {
+    font-size: 2.5em;  // Increased from 2em
+    font-weight: bold;
+  }
+  
+  mat-card {
+    padding: 20px;
+  }
+  
+  mat-card-title {
+    font-size: 2em;  // Increased font size for card title
+  }
+  
+  mat-card-content {
+    font-size: 1.2em;  // Increased font size for content
+  }
+  
+  mat-list-item {
+    font-size: 1.1em;  // Increased font size for list items
+    margin-bottom: 10px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .about-heading {
+      font-size: 2em;  // Adjusted for smaller screens
+    }
+  
+    mat-card {
+      padding: 10px;
+    }
+  
+    mat-card-title {
+      font-size: 1.5em;  // Adjusted for smaller screens
+    }
+  
+    mat-card-content {
+      font-size: 1em;  // Adjusted for smaller screens
+    }
+  
+    mat-list-item {
+      font-size: 1em;  // Adjusted for smaller screens
+    }
+  }
+  

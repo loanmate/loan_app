@@ -1,0 +1,73 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  padding: 2rem;
+  background-color: white;
+  height: 100vh;
+
+  @media (max-width: 1241px) {
+    height: auto;
+  }
+
+  .left-section {
+    max-width: 50%;
+
+    h1 {
+      font-size: 4.8rem;
+      font-weight: bold; // Make the text bold
+      color: #1d2731;
+      line-height: 1.2; // Adjust line height for better readability
+
+      // Force line breaks at two words per line
+      // This is a bit of a hack and may not work perfectly for all text
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 1rem; // Smaller font size for paragraph
+      color: #1d2731;
+    }
+
+    button {
+      margin-top: 1rem;
+      font-size: 1.2rem; // Slightly larger button font size
+      padding: 0.75rem 1.5rem; // Increase padding for a bigger button
+    }
+  }
+
+  .right-section {
+    max-width: 40%;
+
+    .home-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  .get-loan {
+    background-color: #1d2731;
+    color: white;
+
+    &:hover {
+      background-color: #083c5d;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+
+    .left-section, .right-section {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .right-section {
+      margin-top: 2rem;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    height: auto;
+  
+    .grid-container {
+      width: 80%; /* Grid list will take full width of the container */
+      height: auto; /* Let height be determined by content */
+      padding: 0;
+      padding-bottom: calc(80% + 0px) !important;
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap */
+      gap: 20px; /* Add space between cards */
+  
+      mat-grid-tile {
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .card {
+        width: 80%;
+        height: 80%;
+        background-color: #1d2731;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #083c5d;
+          transform: scale(1.1);
+        }
+
+        .footer {
+          font-size: 10px;
+        }
+  
+        mat-card-header,
+        mat-card-footer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          font-weight: bold;
+          color: #ffffff;
+        }
+  
+        mat-card-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 48px;
+          color: #ffffff;
+          flex-grow: 1;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+        flex-direction: column;
+      .grid-container {
+        width: 100%; /* Full width on mobile */
+        flex-direction: column;
+        padding-bottom: calc(400% + 60px) !important;
+        gap: 10px; /* Add space between stacked cards */
+      }
+  
+      mat-grid-tile {
+        flex: 1 1 100%; /* Single item per row on mobile */
+      }
+    }
+  }
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+  

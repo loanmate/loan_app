@@ -1,0 +1,30 @@
+<div class="loan-form">
+    <mat-card class="form-container">
+        <form [formGroup]="loanGroup" class="loan-form-group" (ngSubmit)="onSubmit()">
+          <div class="form-field" *ngFor="let field of formFields">
+            <mat-form-field appearance="fill" *ngIf="field.type !== 'button' && field.type !== 'radio'">
+              <mat-label>{{ field.label }}</mat-label>
+              <input matInput [formControlName]="field.name" *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'number'" [type]="field.type" />
+              <mat-select [formControlName]="field.name" *ngIf="field.type === 'select'">
+                <mat-option *ngFor="let option of field.options" [value]="option">{{ option }}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="field.name === 'cibilscore' && loanGroup.get('cibilscore')?.hasError('min')">
+                Cibil score must be greater than or equal to 700
+              </mat-error>
+              <mat-error *ngIf="field.name === 'salary' && loanGroup.get('salary')?.hasError('min')">
+                Salary must be greater than or equal to 20000
+              </mat-error>
+            </mat-form-field>
+            <mat-radio-group *ngIf="field.type === 'radio'" [formControlName]="field.name">
+            <mat-label style="font-size: 18px;">{{ field.label }}<span style="color: red;">*</span></mat-label>
+              <mat-radio-button color="primary" *ngFor="let option of field.options" [value]="option">{{ option }}</mat-radio-button>
+            </mat-radio-group>
+            <mat-label *ngIf="field.name === 'collateraloffered'" style="padding-left: 2px; color: red;">(E.g., Land, Vehicle, Property)</mat-label>
+          </div>
+          <div class="button-container">
+            <button mat-raised-button color="primary" class="submit-button" type="submit" [disabled]="!this.loanGroup.valid">Submit</button>
+          </div>
+        </form>
+      </mat-card>
+</div>
+  

@@ -1,0 +1,61 @@
+<mat-toolbar id="header" color="primary" class="main-toolbar">
+  <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="company-name" routerLink="/home">
+    <!-- LOANMATE
+    <div class="slogan">Your trust is always with us</div> -->
+    <img src="assets/images/loanmatelogo.jpg" class="logo-image">
+  </span>
+  <span class="spacer"></span>
+  <nav class="desktop-nav">
+    <button mat-button class="nav-button" routerLink="/home">Home</button>
+    <button mat-button class="nav-button" routerLink="/about">Why Loanmate?</button>
+    <mat-menu #loanMenu="matMenu">
+      <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'businessloan']">Business Loan</button>
+      <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'personalloan']">Personal Loan</button>
+      <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'startuploan']">Startup Loan</button>
+      <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'odandcc']">OD & CC</button>
+    </mat-menu>
+    <button mat-button class="nav-button" [matMenuTriggerFor]="loanMenu">
+      <div class="get-loan">
+        <span>Get Loan</span>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </div>
+    </button>
+    <button mat-button class="contact-button" (click)="scrollToFooter()">Contact Us</button>
+  </nav>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav class="mobile-nav" mode="over">
+    <div class="mobile-nav-content">
+      <div class="nav-links">
+        <button mat-button class="nav-button" routerLink="/home" (click)="sidenav.close()">Home</button>
+        <button mat-button class="nav-button" routerLink="/about" (click)="sidenav.close()">Why CompanyName?</button>
+        <button mat-button class="nav-button" (click)="openMobileNav()">
+          <div class="get-loan">
+            <span>Get Loan</span>
+            <mat-icon *ngIf="!opened">keyboard_arrow_down</mat-icon>
+            <mat-icon *ngIf="opened">keyboard_arrow_up</mat-icon>
+          </div>
+        </button>
+        <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'businessloan']" (click)="sidenav.close(); openMobileNav()">Business Loan</button>
+        <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'personalloan']" (click)="sidenav.close(); openMobileNav()">Personal Loan</button>
+        <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'startuploan']" (click)="sidenav.close(); openMobileNav()">Startup Loan</button>
+        <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'odandcc']" (click)="sidenav.close(); openMobileNav()">OD & CC</button>
+        <button mat-button class="nav-button" (click)="sidenav.close(); scrollToFooter()">Contact Us</button>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar id="footer" class="footer-toolbar">
+  <span>&copy; 2024 Loanmate. All Rights Reserved.</span>
+  <span class="spacer"></span>
+  <span>Contact us: loanmate2001&#64;gmail.com | &#64;loanmate</span>
+</mat-toolbar>
