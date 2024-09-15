@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   background-color: white; // Adjust if needed for theme
-  color: #1d2731;
+  color: #083c5d;
 
   .company-name {
     font-weight: bold;
@@ -13,7 +13,7 @@
     .slogan {
       font-size: 0.875rem; // Adjust font size for the slogan
       font-weight: normal;
-      color: #1d2731; // Adjust color to be less prominent than the company name
+      color: #083c5d; // Adjust color to be less prominent than the company name
     }
   }
 
@@ -28,26 +28,26 @@
   }
 
   .contact-button {
-    background-color: #1d2731;
+    background-color: #083c5d;
     color: white;
-    &:hover {
-      background-color: #083c5d;
-      color: white;
-    }
-  }
-
-  .nav-button {
-    color: #1d2731;
     &:hover {
       background-color: #1d2731;
       color: white;
     }
   }
 
+  .nav-button {
+    color: #083c5d;
+    &:hover {
+      background-color: #083c5d;
+      color: white;
+    }
+  }
+
   // .nav-loan-items {
-  //   color: #1d2731 !important;
+  //   color: #083c5d !important;
   //   &:hover {
-  //     background-color: #1d2731 !important;
+  //     background-color: #083c5d !important;
   //     color: white !important;
   //   }
   // }
@@ -71,11 +71,11 @@
 
 .desktop-nav button,
 .mobile-nav .nav-links button {
-  color: #1d2731; // Default text color
+  color: #083c5d; // Default text color
   transition: background-color 0.3s ease; // Smooth transition for background color
 
   &:hover {
-    background-color: #1d2731; // Slightly darker grey
+    background-color: #083c5d; // Slightly darker grey
     color: white; // Optional: Change text color on hover
   }
 }
@@ -123,7 +123,7 @@
   min-height: 56px;
   align-items: center;
   width: 100%; // Ensure full width
-  background-color: #1d2731;
+  background-color: #083c5d;
   color: white;
 
   @media (max-width: 768px) {

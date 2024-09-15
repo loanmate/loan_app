@@ -21,10 +21,32 @@
     font-size: 1.2em;  // Increased font size for content
   }
   
-  mat-list-item {
-    font-size: 1.1em;  // Increased font size for list items
-    margin-bottom: 10px;
+  .custom-mat-list {
+    width: 100%; /* Ensure the list takes full width of the parent */
+    max-width: 100%; /* Prevent it from exceeding the parent's width */
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's width */
   }
+  
+  mat-list-item {
+    height: auto !important;
+    width: 100%; /* Ensure each list item takes full width */
+  }
+  
+  .no-truncate {
+    white-space: normal; /* Allow text to wrap */
+    word-break: break-word; /* Ensure long words break instead of overflowing */
+    overflow-wrap: break-word; /* Additional break handling for long words */
+    padding: 8px; /* Add padding to prevent text from touching the edges */
+    box-sizing: border-box; /* Ensure padding is considered in the width */
+  }
+  
+  mat-list-item span {
+    display: block; /* Make the span behave like a block element to take full width */
+    white-space: normal; /* Ensure text inside the span wraps to the next line */
+    word-break: break-word; /* Handle word breaking properly */
+    overflow-wrap: break-word; /* Prevent overflow of long words */
+  }
+  
   
   @media screen and (max-width: 600px) {
     .about-heading {
@@ -40,11 +62,21 @@
     }
   
     mat-card-content {
-      font-size: 1em;  // Adjusted for smaller screens
+      font-size: 1.3em;  // Adjusted for smaller screens
+    }
+  
+    .custom-mat-list {
+      padding: 0 10px; /* Add padding for smaller screens */
     }
   
     mat-list-item {
-      font-size: 1em;  // Adjusted for smaller screens
+      font-size: 8px; /* Reduce font size for mobile */
+      padding: 12px 8px; /* Reduce padding for smaller screens */
+      min-height: 48px; /* Adjust min height for mobile */
+    }
+  
+    mat-list-item span {
+      font-size: inherit; /* Ensure span inherits the adjusted font size */
     }
   }
   

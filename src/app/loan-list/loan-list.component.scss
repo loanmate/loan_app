@@ -25,19 +25,21 @@
       .card {
         width: 80%;
         height: 80%;
-        background-color: #1d2731;
+        background-color: #083c5d;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         transition: transform 0.3s ease, background-color 0.3s ease;
   
         &:hover {
-          background-color: #083c5d;
+          background-color: #1d2731;
           transform: scale(1.1);
         }
 
         .footer {
           font-size: 10px;
+          display: flex;
+          text-align: center;
         }
   
         mat-card-header,
@@ -72,6 +74,10 @@
   
       mat-grid-tile {
         flex: 1 1 100%; /* Single item per row on mobile */
+      }
+
+      .footer {
+        font-size: 9px !important;
       }
     }
   }

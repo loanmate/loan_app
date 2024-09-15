@@ -4,10 +4,10 @@
   // align-items: center;
   padding: 2rem;
   background-color: white;
-  height: 100vh;
+  height: auto;
 
-  @media (max-width: 1241px) {
-    height: auto;
+  @media (min-width: 1490px) {
+    height: 100vh !important;
   }
 
   .left-section {
@@ -49,11 +49,11 @@
   }
 
   .get-loan {
-    background-color: #1d2731;
+    background-color: #083c5d;
     color: white;
 
     &:hover {
-      background-color: #083c5d;
+      background-color: #1d2731;
     }
   }
 
