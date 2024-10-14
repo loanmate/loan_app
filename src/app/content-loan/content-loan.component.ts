@@ -41,7 +41,7 @@ export class ContentLoanComponent {
         'Any type of business',
         'Must be a viable project',
         'Franchise also applicable',
-        'only done with collateral'
+        'Only done with collateral'
       ],
       image: 'assets/images/startuploan.jpg'
     },
@@ -54,6 +54,15 @@ export class ContentLoanComponent {
         'Mortgage loans for unapproved properties, sheet and passage houses'
       ],
       image: 'assets/images/odandcc.jpg'
+    },
+    educationalloan: {
+      heading: 'Educational Loan',
+      content: 'Turn your educational dreams into reality with our tailored Educational Loans, offering competitive interest rates and flexible repayment options to support your academic journey. Experience swift approval and student-friendly terms designed to make higher education more accessible and affordable. With our Educational Loan, you can focus on your studies while we take care of the financing. Whether you\'re planning to pursue studies in India or abroad, benefit from clear, affordable interest rates and seamless loan disbursement. Empower your future with the financial support you need for tuition, living expenses, and more – your Educational Loan is fast, simple, and designed for your success.',
+      eligibility: [
+        'Should have good academic record',
+        'Applicant should have confirmed admission to a recognized educational institution'
+      ],
+      image: 'assets/images/education.jpg'
     }
   };
 

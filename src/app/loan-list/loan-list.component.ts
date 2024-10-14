@@ -12,7 +12,8 @@ export class LoanListComponent implements OnInit {
     { header: 'Business Loan', footer: 'Fuel Your Growth, Fund Your Success – Get the Business Loan You Deserve!', route: 'businessloan', image: 'assets/images/business.png' },
     { header: 'Personal Loan', footer: 'Your Dreams, Your Way – Secure the Funds with a Personal Loan Today', route: 'personalloan', image: 'assets/images/personal.png' },
     { header: 'Startup Loan', footer: 'Start Big, Dream Bigger – Launch Your Vision with Our Startup Loan!', route: 'startuploan', image: 'assets/images/startup.png' },
-    { header: 'OD & CC', footer: 'Flexibility at Your Fingertips – Manage Your Cash Flow with OD & CC!', route: 'odandcc', image: 'assets/images/odandcc.png' }
+    { header: 'OD & CC', footer: 'Flexibility at Your Fingertips – Manage Your Cash Flow with OD & CC!', route: 'odandcc', image: 'assets/images/odandcc.png' },
+    { header: 'Educational Loan', footer: 'Empower Your Future – Invest in Education with Our Educational Loan!', route: 'educationalloan', image: 'assets/images/education.png'},
   ];
 
   cols: number = 2; // Default to 2 columns

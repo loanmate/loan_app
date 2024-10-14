@@ -10,13 +10,13 @@
       width: 80%; /* Grid list will take full width of the container */
       height: auto; /* Let height be determined by content */
       padding: 0;
-      padding-bottom: calc(80% + 0px) !important;
+      padding-bottom: calc(125% + 0px) !important;
       display: flex;
       flex-wrap: wrap; /* Allow items to wrap */
       gap: 20px; /* Add space between cards */
   
       mat-grid-tile {
-        flex: 1 1 calc(50% - 20px); /* Two items per row */
+        flex: 1 1 calc(50% - 20px) !important; /* Two items per row */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -68,7 +68,7 @@
       .grid-container {
         width: 100%; /* Full width on mobile */
         flex-direction: column;
-        padding-bottom: calc(400% + 60px) !important;
+        padding-bottom: calc(500% + 60px) !important;
         gap: 10px; /* Add space between stacked cards */
       }
   
@@ -80,7 +80,7 @@
 
 .card-container {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;

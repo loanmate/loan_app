@@ -70,6 +70,26 @@ export class DynamicformComponent {
         { name: 'collateraloffered', type: 'radio', label: 'Collateral security offered?', options: ['Yes', 'No'], validators: [Validators.required] },
         { name: 'currentplans', type: 'radio', label: 'Any current ongoing loans?', options: ['Yes', 'No'], validators: [Validators.required] },
       ];
+    }  else if (formType === 'educationalloan') {
+      this.formFields = [
+        { name: 'name', type: 'text', label: 'Name', validators: [Validators.required, Validators.pattern(/^[a-zA-Z\s]+$/)] },
+        { name: 'gender', type: 'radio', label: 'Gender', options: ['Male', 'Female', 'Other'], validators: [Validators.required] },
+        { name: 'email', type: 'email', label: 'Email', validators: [Validators.required, Validators.email] },
+        { name: 'mobile', type: 'text', label: 'Mobile Number', validators: [Validators.required, Validators.pattern(/^\d{10}$/)] },
+        { name: 'iswhatsappnumber', type: 'radio', label: 'Is the above number on whatsapp?', options: ['Yes', 'No'], validators: [Validators.required] },
+        { name: 'collegeoffer', type: 'radio', label: 'Do you have a college offer letter?', options: ['Yes', 'No'], validators: [Validators.required] },
+        { name: 'startyear', type: 'text', label: 'Tentative Course Start Year', validators: [Validators.required, Validators.pattern(/^\d{4}$/)] },
+        { name: 'startmonth', type: 'select', label: 'Tentative Course Start Month', options: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], validators: [Validators.required] },
+        { name: 'courselevel', type: 'select', label: 'Target Course Level', options: ["Masters","Undergrad","PG Diploma","UG Diploma","Phd"], validators: [Validators.required] },
+        { name: 'coursedegree', type: 'text', label: 'Target Course Degree', validators: [Validators.required] },
+        { name: 'coursename', type: 'text', label: 'Target Course Name', validators: [Validators.required] },
+        { name: 'country', type: 'text', label: 'Target Country', validators: [Validators.required] },
+        { name: 'requiredamount', type: 'number', label: 'Required Loan Amount', validators: [Validators.required] },
+        { name: 'collateraloffered', type: 'radio', label: 'Collateral security offered?', options: ['Yes', 'No'], validators: [Validators.required] },
+        { name: 'coapplicantmonthlyincome', type: 'number', label: 'Co-Applicants Monthly Income', validators: [Validators.required] },
+        { name: 'coapplicantmonthlyemi', type: 'number', label: 'Co-Applicants Existing Monthly EMI\'s' },
+        { name: 'monthlyincome', type: 'number', label: 'Applicant Monthly Income(if work)' },
+      ];
     } 
 
     this.buildForm();

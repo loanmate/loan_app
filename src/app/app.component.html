@@ -16,6 +16,7 @@
       <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'personalloan']">Personal Loan</button>
       <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'startuploan']">Startup Loan</button>
       <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'odandcc']">OD & CC</button>
+      <button mat-menu-item class="nav-loan-items" [routerLink]="['/loan-content', 'educationalloan']">Educational Loan</button>
     </mat-menu>
     <button mat-button class="nav-button" [matMenuTriggerFor]="loanMenu">
       <div class="get-loan">
@@ -44,6 +45,7 @@
         <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'personalloan']" (click)="sidenav.close(); openMobileNav()">Personal Loan</button>
         <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'startuploan']" (click)="sidenav.close(); openMobileNav()">Startup Loan</button>
         <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'odandcc']" (click)="sidenav.close(); openMobileNav()">OD & CC</button>
+        <button *ngIf="opened" mat-button class="nav-button" [routerLink]="['/loan-content', 'educationalloan']" (click)="sidenav.close(); openMobileNav()">Educational Loan</button>
         <button mat-button class="nav-button" (click)="sidenav.close(); scrollToFooter()">Contact Us</button>
       </div>
     </div>
